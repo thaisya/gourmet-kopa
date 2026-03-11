@@ -1,0 +1,145 @@
+---
+const menuItems = {
+  combo: [
+    { nameKey: 'menu.combo-1-name', descKey: 'menu.combo-1-desc', badgeKey: 'menu.combo-1-badge', price: '18,90', image: 'https://images.unsplash.com/photo-1610440042657-612c34d95e9f?w=500&q=80', name: 'Klasikinis rinkinys', desc: 'Klasikinis Kopa mėsainis, traškios bulvytės ir naminis limonadas. Tobulas derinys kiekvienam.', badge: 'Geriausias pasiūlymas' },
+    { nameKey: 'menu.combo-2-name', descKey: 'menu.combo-2-desc', badgeKey: 'menu.combo-2-badge', price: '24,90', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&q=80', name: 'Gurmano rinkinys', desc: 'Trufelinis Gurmanas mėsainis, saldžiųjų bulvių fri su trufelių aliejumi ir aludario pasirinktas alus.', badge: 'Premium' },
+    { nameKey: 'menu.combo-3-name', descKey: 'menu.combo-3-desc', badgeKey: '', price: '21,90', image: 'https://images.unsplash.com/photo-1551615593-ef5fe247e8f7?w=500&q=80', name: 'Dūminis rinkinys', desc: 'Dūminis BBQ mėsainis, svogūnų žiedai ir šaltas IPA alus. Tiems, kurie mėgsta intensyvų skonį.', badge: '' },
+  ],
+  burgers: [
+    { nameKey: 'menu.burger-1-name', descKey: 'menu.burger-1-desc', badgeKey: 'menu.burger-1-badge', price: '14,90', image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80', name: 'Klasikinis Kopa', desc: 'Sultinga 200g jautienos kotletė, karamelizuoti svogūnai, rukola, naminis aioli padažas, „Gouda" sūris. Patiekiama su brioche bandele.', badge: 'Populiariausias' },
+    { nameKey: 'menu.burger-2-name', descKey: 'menu.burger-2-desc', badgeKey: 'menu.burger-2-badge', price: '18,50', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80', name: 'Trufelinis Gurmanas', desc: 'Juodojo trufelio aioli, karamelizuoti grybai, „Brie" sūris, karinė rukola ant dvigubos jautienos kotletės.', badge: 'Šefo pasirinkimas' },
+    { nameKey: 'menu.burger-3-name', descKey: 'menu.burger-3-desc', badgeKey: '', price: '16,90', image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80', name: 'Dūminis BBQ', desc: 'Lėtai rūkyta jautiena, naminis BBQ padažas, traškūs svogūnų žiedai, marinuoti agurkai, „Cheddar" sūris.', badge: '' },
+    { nameKey: 'menu.burger-4-name', descKey: 'menu.burger-4-desc', badgeKey: 'menu.burger-4-badge', price: '19,90', image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80', name: 'Jūros Kopa', desc: 'Traška krevetė tempuroje, vietinių žolelių padažas, avokadas, marinuotas imbieras, sezamų sėklos.', badge: 'Naujiena' },
+  ],
+  sides: [
+    { nameKey: 'menu.side-1-name', descKey: 'menu.side-1-desc', badgeKey: '', price: '4,90', image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&q=80', name: 'Traškios bulvytės', desc: 'Auksinės bulvytės su jūros druska ir rozmarinu. Patiekiamos su naminio aioli padažu.', badge: '' },
+    { nameKey: 'menu.side-2-name', descKey: 'menu.side-2-desc', badgeKey: 'menu.side-2-badge', price: '5,90', image: 'https://images.unsplash.com/photo-1529589510304-b7e994a92f60?w=500&q=80', name: 'Saldžiųjų bulvių fri', desc: 'Traškios saldžiųjų bulvių lazdelės su medaus ir čili padažu.', badge: 'Mėgstamiausias' },
+    { nameKey: 'menu.side-3-name', descKey: 'menu.side-3-desc', badgeKey: '', price: '5,50', image: 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=500&q=80', name: 'Svogūnų žiedai', desc: 'Traškūs svogūnų žiedai alaus tešloje su dūminiu BBQ padažu.', badge: '' },
+    { nameKey: 'menu.side-4-name', descKey: 'menu.side-4-desc', badgeKey: '', price: '3,90', image: 'https://images.unsplash.com/photo-1625938145744-e380515399bf?w=500&q=80', name: 'Coleslaw salotos', desc: 'Šviežios kopūstų ir morkų salotos su kreminio padažo užpilu.', badge: '' },
+  ],
+  drinks: [
+    { nameKey: 'menu.drink-1-name', descKey: 'menu.drink-1-desc', badgeKey: '', price: '3,90', image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=500&q=80', name: 'Naminis limonadas', desc: 'Šviežiai spaustas citrinų limonadas su mėtomis ir imbieru.', badge: '' },
+    { nameKey: 'menu.drink-2-name', descKey: 'menu.drink-2-desc', badgeKey: 'menu.drink-2-badge', price: '5,50', image: 'https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&q=80', name: 'Aludario IPA', desc: 'Vietinis IPA alus iš Klaipėdos aludarių — apynių aromatas su citrusinėmis gaidelėmis.', badge: 'Vietinis' },
+    { nameKey: 'menu.drink-3-name', descKey: 'menu.drink-3-desc', badgeKey: '', price: '6,50', image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500&q=80', name: 'Craft Stout', desc: 'Tamsus, aksominis stout alus su šokolado ir kavos natomis.', badge: '' },
+    { nameKey: 'menu.drink-4-name', descKey: 'menu.drink-4-desc', badgeKey: '', price: '4,50', image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&q=80', name: 'Šviežia sultys', desc: 'Šviežiai spaustos apelsinų, morkų arba obuolių sultys.', badge: '' },
+  ],
+};
+
+const categories = [
+  { id: 'combo', labelKey: 'menu.tab-combo', label: 'Combo' },
+  { id: 'burgers', labelKey: 'menu.tab-burgers', label: 'Mėsainiai' },
+  { id: 'sides', labelKey: 'menu.tab-sides', label: 'Užkandžiai' },
+  { id: 'drinks', labelKey: 'menu.tab-drinks', label: 'Gėrimai' },
+];
+---
+
+<section id="meniu" class="py-24 md:py-32 bg-charcoal-light relative">
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+  <div class="absolute top-0 left-0 w-72 h-72 bg-orange/3 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+    <!-- Section Header -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <span class="text-orange text-sm tracking-[0.3em] uppercase font-medium" data-i18n="menu.label">Paragauk</span>
+      <h2 class="font-serif text-3xl md:text-5xl font-bold mt-3 mb-5">
+        <span data-i18n="menu.title-1">Mūsų </span><span class="text-orange italic" data-i18n="menu.title-2">meniu</span>
+      </h2>
+      <p class="text-cream-muted max-w-lg mx-auto" data-i18n="menu.subtitle">
+        Kiekvienas mėsainis sukurtas su meile, naudojant tik geriausius ingredientus
+      </p>
+      <div class="w-16 h-0.5 bg-orange mx-auto mt-5"></div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex justify-center mb-12 animate-on-scroll">
+      <div class="inline-flex bg-charcoal rounded-full p-1.5 border border-charcoal-lighter gap-1" id="menu-tabs">
+        {categories.map((cat, i) => (
+          <button
+            data-tab={cat.id}
+            data-i18n={cat.labelKey}
+            class:list={[
+              'menu-tab px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap',
+              i === 0
+                ? 'bg-orange text-charcoal shadow-[0_0_15px_rgba(236,162,33,0.3)]'
+                : 'text-cream-muted hover:text-cream hover:bg-charcoal-lighter',
+            ]}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Menu Panels -->
+    {categories.map((cat, catIndex) => (
+      <div
+        data-panel={cat.id}
+        class:list={[
+          'menu-panel grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8',
+          catIndex === 0 ? '' : 'hidden',
+        ]}
+      >
+        {menuItems[cat.id as keyof typeof menuItems].map((item, index) => (
+          <div
+            class="group relative bg-charcoal border border-charcoal-lighter rounded-2xl overflow-hidden hover:border-orange/30 transition-all duration-500 hover:shadow-[0_0_40px_rgba(236,162,33,0.1)] hover:-translate-y-1 sm:h-52"
+            style={`animation: fade-in-up 0.5s ease-out ${index * 80}ms both;`}
+          >
+            <div class="flex flex-col sm:flex-row h-full">
+              <div class="sm:w-44 lg:w-52 h-48 sm:h-full relative overflow-hidden flex-shrink-0">
+                <img src={item.image} alt={item.name} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/40 sm:block hidden"></div>
+                {item.badge && (
+                  <span class="absolute top-3 left-3 px-3 py-1 bg-orange text-charcoal text-xs font-bold rounded-full uppercase tracking-wider" data-i18n={item.badgeKey || undefined}>
+                    {item.badge}
+                  </span>
+                )}
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-center">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="font-serif text-xl font-semibold group-hover:text-orange transition-colors duration-300" data-i18n={item.nameKey}>{item.name}</h3>
+                  <span class="text-orange font-bold text-xl font-serif ml-4 whitespace-nowrap">€{item.price}</span>
+                </div>
+                <p class="text-cream-muted text-sm leading-relaxed" data-i18n={item.descKey}>{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    ))}
+
+    <div class="text-center mt-12 animate-on-scroll">
+      <p class="text-cream-subtle text-sm italic" data-i18n="menu.note">* Kainos nurodytos su PVM. Alergenų informaciją galite gauti pas padavėją.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.menu-tab');
+  const panels = document.querySelectorAll('.menu-panel');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = (tab as HTMLElement).dataset.tab;
+      tabs.forEach((t) => {
+        t.classList.remove('bg-orange', 'text-charcoal', 'shadow-[0_0_15px_rgba(236,162,33,0.3)]');
+        t.classList.add('text-cream-muted', 'hover:text-cream', 'hover:bg-charcoal-lighter');
+      });
+      tab.classList.add('bg-orange', 'text-charcoal', 'shadow-[0_0_15px_rgba(236,162,33,0.3)]');
+      tab.classList.remove('text-cream-muted', 'hover:text-cream', 'hover:bg-charcoal-lighter');
+      panels.forEach((panel) => {
+        const panelEl = panel as HTMLElement;
+        if (panelEl.dataset.panel === target) {
+          panelEl.classList.remove('hidden');
+          panelEl.querySelectorAll('.group').forEach((card, i) => {
+            const el = card as HTMLElement;
+            el.style.animation = 'none';
+            el.offsetHeight;
+            el.style.animation = `fade-in-up 0.5s ease-out ${i * 80}ms both`;
+          });
+        } else {
+          panelEl.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

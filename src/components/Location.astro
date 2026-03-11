@@ -1,0 +1,94 @@
+---
+import { MapPin, Phone, Clock, Navigation } from 'lucide-astro';
+---
+
+<section id="kontaktai" class="py-24 md:py-32 bg-charcoal relative overflow-hidden">
+  <div class="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-orange/5 rounded-full blur-3xl -translate-x-1/2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-orange text-sm tracking-[0.3em] uppercase font-medium" data-i18n="location.label">Atvykite</span>
+      <h2 class="font-serif text-3xl md:text-5xl font-bold mt-3 mb-5">
+        <span data-i18n="location.title-1">Kur mus </span><span class="text-orange italic" data-i18n="location.title-2">rasti</span>
+      </h2>
+      <div class="w-16 h-0.5 bg-orange mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Info Cards -->
+      <div class="space-y-6 animate-on-scroll">
+        <div class="flex items-start gap-5 group">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0 group-hover:bg-orange/20 transition-colors duration-300">
+            <MapPin class="w-6 h-6 text-orange" />
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-1" data-i18n="location.address-title">Adresas</h3>
+            <p class="text-cream-muted" data-i18n="location.address">Tiltų g. 5, 91246 Klaipėda</p>
+            <p class="text-cream-subtle text-sm" data-i18n="location.address-note">Senamiesčio širdyje</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-5 group">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0 group-hover:bg-orange/20 transition-colors duration-300">
+            <Clock class="w-6 h-6 text-orange" />
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-1" data-i18n="location.hours-title">Darbo laikas</h3>
+            <p class="text-cream-muted" data-i18n="location.hours-1">Pr – Kt: 11:00 – 22:00</p>
+            <p class="text-cream-muted" data-i18n="location.hours-2">Pt – Š: 11:00 – 00:00</p>
+            <p class="text-cream-muted" data-i18n="location.hours-3">Sk: 12:00 – 21:00</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-5 group">
+          <div class="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0 group-hover:bg-orange/20 transition-colors duration-300">
+            <Phone class="w-6 h-6 text-orange" />
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-1" data-i18n="location.phone-title">Telefonas</h3>
+            <p class="text-cream-muted">+370 46 123 456</p>
+            <p class="text-cream-subtle text-sm" data-i18n="location.phone-note">Rezervacijoms ir užsakymams</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a
+            href="https://maps.google.com/?q=Tiltų+g.+5+Klaipėda+Lithuania"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-orange text-charcoal font-bold rounded-full hover:bg-orange-dark transition-all duration-300 hover:shadow-[0_0_25px_rgba(236,162,33,0.4)] hover:scale-105"
+          >
+            <Navigation class="w-5 h-5" />
+            <span data-i18n="location.btn-map">Rasti žemėlapyje</span>
+          </a>
+          <a
+            href="tel:+37046123456"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-cream-subtle text-cream font-medium rounded-full hover:border-orange hover:text-orange transition-all duration-300"
+          >
+            <Phone class="w-5 h-5" />
+            <span data-i18n="location.btn-call">Skambinti dabar</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Map / Image -->
+      <div class="animate-on-scroll relative rounded-2xl overflow-hidden border border-charcoal-lighter group">
+        <img
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+          alt="Gourmet Kopa restoranas"
+          class="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <p class="font-serif text-xl font-semibold mb-1" data-i18n="location.map-name">Gourmet Kopa</p>
+          <p class="text-cream-muted text-sm flex items-center gap-1.5">
+            <MapPin class="w-4 h-4 text-orange" />
+            <span data-i18n="location.map-area">Klaipėdos senamiestis</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

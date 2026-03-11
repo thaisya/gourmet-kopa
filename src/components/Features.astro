@@ -1,0 +1,67 @@
+---
+import { Beef, Wheat, ChefHat } from 'lucide-astro';
+---
+
+<section id="apie" class="py-24 md:py-32 bg-charcoal relative overflow-hidden">
+  <!-- Decorative background element -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange/5 rounded-full blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <span class="text-orange text-sm tracking-[0.3em] uppercase font-medium" data-i18n="features.label">Kodėl mes</span>
+      <h2 class="font-serif text-3xl md:text-5xl font-bold mt-3 mb-5">
+        <span data-i18n="features.title-1">Mūsų </span><span class="text-orange italic" data-i18n="features.title-2">filosofija</span>
+      </h2>
+      <div class="w-16 h-0.5 bg-orange mx-auto"></div>
+    </div>
+
+    <!-- Feature Grid Zig-Zag -->
+    <div class="space-y-24 lg:space-y-32">
+      <!-- Beef -->
+      <div class="group flex flex-col md:flex-row gap-10 md:gap-16 items-center animate-on-scroll">
+        <div class="w-full md:w-1/2 relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+          <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-colors duration-700 z-10 w-full h-full"></div>
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Vietinė jautiena" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" />
+        </div>
+        <div class="w-full md:w-1/2 space-y-6">
+          <div class="w-16 h-16 rounded-full bg-orange/10 flex items-center justify-center">
+            <Beef class="w-8 h-8 text-orange" />
+          </div>
+          <h3 class="font-serif text-3xl font-semibold text-white" data-i18n="features.beef-title">Vietinė jautiena</h3>
+          <p class="text-cream-muted text-lg leading-relaxed max-w-md" data-i18n="features.beef-desc">Naudojame tik aukščiausios kokybės Lietuvos ūkininkų jautieną, auginamą be antibiotikų ir hormonų. Kiekvienas maltinis ruošiamas kasdien, užtikrinant tobulą tekstūrą ir skonį.</p>
+        </div>
+      </div>
+
+      <!-- Buns (Reversed) -->
+      <div class="group flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center animate-on-scroll">
+        <div class="w-full md:w-1/2 relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+           <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-colors duration-700 z-10 w-full h-full"></div>
+          <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Brioche bandelės" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" />
+        </div>
+        <div class="w-full md:w-1/2 space-y-6 md:text-right flex flex-col md:items-end">
+          <div class="w-16 h-16 rounded-full bg-orange/10 flex items-center justify-center">
+            <Wheat class="w-8 h-8 text-orange" />
+          </div>
+          <h3 class="font-serif text-3xl font-semibold text-white" data-i18n="features.buns-title">Brioche bandelės</h3>
+          <p class="text-cream-muted text-lg leading-relaxed max-w-md" data-i18n="features.buns-desc">Mūsų kepėjai kasdien kepa šviežias brioche bandeles pagal tradicinį prancūzišką receptą. Lengvos, purios ir vos salsvos — jos tobulai papildo sultingą jautieną.</p>
+        </div>
+      </div>
+
+      <!-- Sauces -->
+      <div class="group flex flex-col md:flex-row gap-10 md:gap-16 items-center animate-on-scroll">
+        <div class="w-full md:w-1/2 relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+           <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-colors duration-700 z-10 w-full h-full"></div>
+          <img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Naminiai padažai" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" />
+        </div>
+        <div class="w-full md:w-1/2 space-y-6">
+          <div class="w-16 h-16 rounded-full bg-orange/10 flex items-center justify-center">
+            <ChefHat class="w-8 h-8 text-orange" />
+          </div>
+          <h3 class="font-serif text-3xl font-semibold text-white" data-i18n="features.sauce-title">Naminiai padažai</h3>
+          <p class="text-cream-muted text-lg leading-relaxed max-w-md" data-i18n="features.sauce-desc">Kiekvienas padažas gaminamas rankomis iš natūralių ingredientų. Nuo trufelio aioli iki klasikinio dūminio BBQ ir aštraus chipotle — rasite tobulą skonių derinį kiekvienam kąsniui.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
