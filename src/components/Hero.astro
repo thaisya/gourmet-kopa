@@ -2,7 +2,7 @@
 
 ---
 
-<section id="rezervuoti" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+<section id="rezervuoti" class="relative h-screen min-h-[700px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
   <!-- Background Image -->
   <div class="absolute inset-0">
     <img
@@ -56,10 +56,17 @@
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <div class="w-6 h-10 border-2 border-cream-subtle rounded-full flex items-start justify-center p-1.5">
-      <div class="w-1.5 h-3 bg-orange rounded-full animate-pulse"></div>
-    </div>
+  <!-- Scroll indicator (Burger) -->
+  <div class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+    <a href="#meniu" aria-label="Slinkti žemyn" class="text-orange hover:text-orange-dark transition-colors flex flex-col items-center">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="drop-shadow-lg">
+        <!-- Top Bun -->
+        <path d="M12 3C7 3 3 7.5 3 11H21C21 7.5 17 3 12 3Z" fill="currentColor" opacity="0.9"/>
+        <!-- Patty / Lettuce -->
+        <path d="M2 13H22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- Bottom Bun -->
+        <path d="M4 16V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V16H4Z" fill="currentColor" opacity="0.9"/>
+      </svg>
+    </a>
   </div>
 </section>
