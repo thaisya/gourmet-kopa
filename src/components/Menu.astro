@@ -51,14 +51,14 @@ const categories = [
     </div>
 
     <!-- Category Tabs -->
-    <div class="flex justify-center mb-12 animate-on-scroll">
-      <div class="inline-flex bg-charcoal rounded-full p-1.5 border border-charcoal-lighter gap-1" id="menu-tabs">
+    <div class="flex justify-center mb-12 animate-on-scroll px-2">
+      <div class="flex flex-wrap sm:inline-flex justify-center bg-charcoal rounded-3xl sm:rounded-full p-1 sm:p-1.5 border border-charcoal-lighter gap-1" id="menu-tabs">
         {categories.map((cat, i) => (
           <button
             data-tab={cat.id}
             data-i18n={cat.labelKey}
             class:list={[
-              'menu-tab px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap',
+              'menu-tab px-3 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap',
               i === 0
                 ? 'bg-orange text-charcoal shadow-[0_0_15px_rgba(236,162,33,0.3)]'
                 : 'text-cream-muted hover:text-cream hover:bg-charcoal-lighter',

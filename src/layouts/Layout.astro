@@ -38,7 +38,9 @@ const {
     <title>{title}</title>
   </head>
   <body class="bg-charcoal text-cream antialiased overflow-x-hidden">
-    <slot />
+    <main class="overflow-x-hidden w-full relative min-h-screen flex flex-col">
+      <slot />
+    </main>
 
     <!-- Scroll animation observer -->
     <script>
